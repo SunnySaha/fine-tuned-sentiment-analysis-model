@@ -1,0 +1,19 @@
+
+$schema: https://azuremlschemas.azureedge.net/latest/managedOnlineDeployment.schema.json
+name: blue
+endpoint_name: sentiment-demo-endpoint
+
+model:
+  path: ./model
+  type: custom_model
+
+code_configuration:
+  code: ./src
+  scoring_script: score.py
+
+environment:
+  image: mcr.microsoft.com/azureml/openmpi4.1.0-ubuntu22.04:latest
+  conda_file: ./environment/conda.yml
+
+instance_type: Standard_DS2_v2
+instance_count: 1
