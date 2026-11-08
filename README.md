@@ -1,3 +1,4 @@
+# As the Model Size more than 100, the model itself not included in this repo.
 # DistilBERT Sentiment Analysis
 
 A Transformer-based NLP project that classifies IMDb movie reviews as
